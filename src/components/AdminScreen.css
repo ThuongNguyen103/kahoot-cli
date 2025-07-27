@@ -1,0 +1,289 @@
+/* client/src/components/AdminScreen.css */
+.admin-screen {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.admin-screen h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.admin-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.admin-section h2 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.admin-section p {
+    color: #6c757d;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #495057;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.options-input .option-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.options-input .option-row label {
+    flex-basis: 30px;
+    margin-bottom: 0;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.options-input .option-row input {
+    flex-grow: 1;
+}
+
+.admin-section button {
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-section button:hover {
+    background-color: #218838;
+}
+
+.admin-section button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.game-controls button {
+    background-color: #007bff; /* Blue */
+    margin-right: 15px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+}
+.game-controls button:hover {
+    background-color: #0056b3;
+}
+
+.admin-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Thêm vào AdminScreen.css */
+.admin-auth-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.admin-auth-screen input[type="password"] {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.admin-auth-screen button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.admin-auth-screen button:hover {
+    background-color: #0056b3;
+}
+
+.auth-message {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #dc3545; /* Red for error */
+    font-weight: bold;
+}
+
+.note-text {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.game-status-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.current-question-display {
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.admin-section select {
+    width: calc(70% - 20px); /* Điều chỉnh kích thước cho phù hợp */
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.admin-section button {
+    vertical-align: middle;
+}
+
+.player-list-admin, .leaderboard-list-admin {
+    list-style: none;
+    padding: 0;
+}
+
+.player-list-admin li, .leaderboard-list-admin li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 1.1em;
+}
+
+.player-list-admin li:last-child, .leaderboard-list-admin li:last-child {
+    border-bottom: none;
+}
+
+.player-list-admin li.disconnected, .leaderboard-list-admin li.disconnected {
+    opacity: 0.7;
+    font-style: italic;
+    color: #888;
+}
+
+/* client/src/components/AdminScreen.css */
+/* ... (các CSS hiện có giữ nguyên) ... */
+
+.admin-section h2 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    display: flex; /* Dùng flexbox để căn chỉnh */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-section h2 button {
+    font-size: 0.8em;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #17a2b8; /* Cyan */
+}
+
+.admin-section h2 button:hover {
+    background-color: #138496;
+}
+
+.admin-section .form-group button {
+    margin-left: 10px;
+    padding: 10px 15px;
+    font-size: 0.9em;
+}
+
+.admin-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.admin-message.error { /* Thêm style cho thông báo lỗi */
+    background-color: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* client/src/components/AdminScreen.css */
+
+/* ... (các CSS hiện có) ... */
+
+/* Thêm hoặc chỉnh sửa phần này nếu muốn style số lượng người chơi */
+.admin-section h2 {
+    /* ... (các thuộc tính hiện có) ... */
+    /* Nếu bạn muốn số lượng nằm trong một span riêng để style */
+    position: relative;
+    padding-right: 60px; /* Đủ chỗ cho số lượng */
+}
+
+.admin-section h2 .connected-count {
+    position: absolute;
+    right: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #28a745; /* Màu xanh lá cho số lượng */
+}

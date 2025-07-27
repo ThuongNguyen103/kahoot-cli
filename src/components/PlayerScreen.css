@@ -1,0 +1,446 @@
+/* client/src/components/PlayerScreen.css */
+.player-screen {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-join-form, .game-waiting-screen, .game-playing-screen, .game-ended-screen {
+    padding: 20px;
+}
+
+.player-join-form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.player-join-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.player-join-form button:hover {
+    background-color: #0056b3;
+}
+
+.avatar-selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.avatar-option {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.avatar-option.selected {
+    border-color: #007bff;
+}
+
+.game-waiting-screen h2, .game-ended-screen h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.player-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.player-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.player-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Game Playing Screen */
+.question-container {
+    background-color: #e0f7fa;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.time-left {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #d32f2f;
+}
+
+.question-container h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.option-button {
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    border-color: #999;
+}
+
+.option-button.selected {
+    background-color: #a8dadc;
+    border-color: #457b9d;
+    color: #333;
+    transform: scale(1.02);
+}
+
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.option-button.correct-answer {
+    background-color: #d4edda; /* Green for correct */
+    border-color: #28a745;
+    animation: pulse-correct 1s infinite alternate;
+}
+
+.option-button.wrong-answer {
+    background-color: #f8d7da; /* Red for wrong */
+    border-color: #dc3545;
+}
+
+@keyframes pulse-correct {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.03); }
+}
+
+.feedback-message {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.feedback-message.correct {
+    color: #28a745;
+}
+
+.feedback-message.wrong {
+    color: #dc3545;
+}
+
+.correct-answer-display {
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.waiting-for-question h2 {
+    color: #6c757d;
+}
+
+.leaderboard-section {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.leaderboard-section h3 {
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.leaderboard-list {
+    list-style: none;
+    padding: 0;
+}
+
+.leaderboard-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+.leaderboard-list li:last-child {
+    border-bottom: none;
+}
+
+.player-avatar-small {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.final-leaderboard li {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #007bff;
+}
+.final-leaderboard li:nth-child(1) { color: #ffbf00; } /* Gold */
+.final-leaderboard li:nth-child(2) { color: #c0c0c0; } /* Silver */
+.final-leaderboard li:nth-child(3) { color: #cd7f32; } /* Bronze */
+
+/* Thêm vào PlayerScreen.css */
+.avatar-option {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    background-color: #f0f0f0; /* Nền cho avatar */
+    padding: 2px;
+}
+
+.avatar-option:hover {
+    transform: scale(1.05);
+}
+
+.avatar-option.selected {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.join-message {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #d32f2f; /* Màu đỏ cho thông báo lỗi */
+    font-weight: bold;
+}
+
+.game-waiting-screen .player-list li.disconnected {
+    opacity: 0.6;
+    font-style: italic;
+    color: #888;
+}
+
+.question-text-only {
+    font-size: 2.2em; /* Lớn hơn cho hiển thị câu hỏi không có đáp án */
+    color: #2c3e50;
+    margin-bottom: 40px;
+    min-height: 100px; /* Đảm bảo không bị giật khi chuyển trạng thái */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.countdown-timer {
+    font-size: 5em;
+    font-weight: bold;
+    color: #e67e22; /* Cam */
+    animation: pulse-countdown 1s infinite alternate;
+}
+
+@keyframes pulse-countdown {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.game-results-screen h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.game-results-screen .correct-answer-display {
+    font-size: 1.5em;
+    color: #28a745;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.game-results-screen .feedback-message {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+}
+
+/* client/src/components/PlayerScreen.css */
+/* ... (các CSS hiện có giữ nguyên) ... */
+
+/* Avatar Selection Styling */
+.avatar-selection {
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các avatar xuống dòng nếu không đủ chỗ */
+    justify-content: center;
+    gap: 10px; /* Giảm khoảng cách giữa các avatar */
+    margin-bottom: 20px;
+    max-width: 100%; /* Giới hạn chiều rộng để dễ căn giữa */
+}
+
+.avatar-option-wrapper {
+    width: 70px; /* Kích thước khung avatar */
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    background-color: #e0e0e0; /* Nền nhẹ cho vòng tròn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-option-wrapper:hover {
+    transform: scale(1.05);
+}
+
+.avatar-option-wrapper.selected {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.avatar-option {
+    width: 50px; /* Kích thước ảnh avatar bên trong */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Player Info Screen */
+.player-info-screen {
+    background-color: #e6f7ff; /* Nền xanh nhẹ */
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.player-info-screen h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.player-avatar-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #007bff;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.player-info-screen h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.player-info-screen p {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.player-info-screen button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.player-info-screen button:hover {
+    background-color: #0056b3;
+}
+
+/* Nút "Xem thông tin của tôi" */
+.player-screen-wrapper {
+    position: relative;
+    min-height: 90vh; /* Đảm bảo đủ không gian cho nội dung và nút */
+}
+.view-my-info-button {
+    position: fixed; /* Giữ nút ở một vị trí cố định */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6c757d; /* Xám */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Đảm bảo nút nằm trên các thành phần khác */
+}
+
+.view-my-info-button:hover {
+    background-color: #5a6268;
+}
+
+/* client/src/components/PlayerScreen.css */
+/* ... (các CSS hiện có giữ nguyên) ... */
+
+.rank-info-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #34495e; /* Darker text for readability */
+}
+
+.rank-info-message.top-rank {
+    color: #28a745; /* Green for top rank */
+    animation: bounce-in 0.5s ease-out; /* Simple animation */
+}
+
+@keyframes bounce-in {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+

@@ -1,0 +1,48 @@
+/* client/src/App.css */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+.home-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.home-screen button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.home-screen button:hover {
+    background-color: #45a049;
+}
+
+.home-screen button:nth-of-type(2) { /* Nút "Tôi là Admin" */
+    background-color: #f44336; /* Red */
+}
+
+.home-screen button:nth-of-type(2):hover {
+    background-color: #da190b;
+}
